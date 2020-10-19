@@ -1,0 +1,17 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Marcus Feitoza",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node src/index.js",
+    "dev": "NODE_ENV=dev node-dev src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "easy-livereload": "^1.4.3",
+    "express": "^4.17.1",
+    "node-dev": "^6.2.0"
+  }
+}
