@@ -1,7 +1,8 @@
 const express = require('express')
 const dotenv = require('dotenv')
 
-const timestamp = require('./timestamp')
+const nowHandler = require ('./nowHandler')
+const dateHandler = require('./dateHandler')
 
 const livereload = require('easy-livereload')
 
@@ -16,7 +17,8 @@ if (app.get('env') === 'development') {
     }))
 }
 
-app.get('/api/timestamp/:date?', timestamp)
+app.get('/api/timestamp', nowHandler)
+app.get('/api/timestamp/:date?', dateHandler)
 
 const listener = app.listen(PORT, () => {
     console.log('Your app is listening on port ' + listener.address().port)

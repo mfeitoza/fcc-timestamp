@@ -22,11 +22,7 @@ function parseDate(date) {
 function timestamp(req, res) {
     let date = req.params.date
 
-    if (date) {
-        date = parseDate(date)
-    } else {
-        date = new Date(Date.now())
-    }
+    date = parseDate(date)
 
     if (date) {
         res.json({
